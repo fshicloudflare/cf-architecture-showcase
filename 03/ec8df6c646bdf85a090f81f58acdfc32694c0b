@@ -1,0 +1,31 @@
+.gitignore
+  s_03321f42b6a2ac::t_8ccda3959641b1 1-5
+package-lock.json
+  s_03321f42b6a2ac::t_2cc493991c61d4 1-1545
+package.json
+  s_03321f42b6a2ac::t_8a6cbda62a5244 1-15
+public/app.js
+  s_03321f42b6a2ac::t_d4866728351963 1-154
+public/index.html
+  s_03321f42b6a2ac::t_e90f88adb56a9f 1-842
+public/styles.css
+  s_03321f42b6a2ac::t_45e2a00f390362 1-808
+wrangler.jsonc
+  s_03321f42b6a2ac::t_866894dcc35600 1-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "03ec8df6c646bdf85a090f81f58acdfc32694c0b",
+  "prompts": {},
+  "sessions": {
+    "s_03321f42b6a2ac": {
+      "agent_id": {
+        "tool": "devin",
+        "id": "s_03321f42b6a2ac",
+        "model": "unknown"
+      },
+      "human_author": "Flora Shi <fshi@cloudflare.com>"
+    }
+  }
+}
