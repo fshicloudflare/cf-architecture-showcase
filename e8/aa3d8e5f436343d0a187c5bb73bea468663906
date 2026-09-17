@@ -1,0 +1,21 @@
+public/index.html
+  s_c50a69a79ab44e::t_ec30d862d69f17 50-120
+public/styles.css
+  s_c50a69a79ab44e::t_a5100c9a6b141a 377-492
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "e8aa3d8e5f436343d0a187c5bb73bea468663906",
+  "prompts": {},
+  "sessions": {
+    "s_c50a69a79ab44e": {
+      "agent_id": {
+        "tool": "devin",
+        "id": "s_c50a69a79ab44e",
+        "model": "unknown"
+      },
+      "human_author": "Flora Shi <fshi@cloudflare.com>"
+    }
+  }
+}
