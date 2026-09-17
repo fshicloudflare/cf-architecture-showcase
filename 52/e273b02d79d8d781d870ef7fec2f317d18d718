@@ -1,0 +1,19 @@
+public/app.js
+  s_0650440d47a71e::t_a8aace6bad3e81 63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "52e273b02d79d8d781d870ef7fec2f317d18d718",
+  "prompts": {},
+  "sessions": {
+    "s_0650440d47a71e": {
+      "agent_id": {
+        "tool": "devin",
+        "id": "s_0650440d47a71e",
+        "model": "unknown"
+      },
+      "human_author": "Flora Shi <fshi@cloudflare.com>"
+    }
+  }
+}
