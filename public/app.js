@@ -60,6 +60,7 @@ const PRODUCTS = [
 
   // Media & Realtime
   { name: "Images", cat: "media", icon: "IMG", desc: "An images binding or URL transform lets a Worker resize, optimize, and serve images on the fly at the edge." },
+  { name: "Stream", cat: "media", icon: "ST", desc: "Serverless live and on-demand video streaming — upload, store, encode, and deliver video with one API, with adaptive bitrate encoding and global delivery, no infrastructure to configure." },
   { name: "Realtime SFU", cat: "media", icon: "RT", desc: "A Selective Forwarding Unit that routes WebRTC audio/video/data between clients; your Worker or backend issues session credentials and decides who can publish or subscribe." },
   { name: "RealtimeKit", cat: "media", icon: "RK", desc: "Prebuilt meeting SDKs and UI components layered on top of the Realtime SFU, so you don't build signaling and media routing yourself." },
 
