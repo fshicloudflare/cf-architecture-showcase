@@ -47,6 +47,77 @@
 
     <!-- ============ PANEL 0: PHILOSOPHY ============ -->
     <section class="panel" id="panel-philosophy">
+      <div class="region-earth">
+        <div class="region-earth-glow" aria-hidden="true"></div>
+        <svg class="region-earth-globe" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Globe illustrating Cloudflare's global network of points of presence">
+          <circle cx="200" cy="200" r="150" fill="none" stroke="#ffffff1a" stroke-width="1"/>
+
+          <g class="globe-graticule">
+            <ellipse cx="200" cy="200" rx="150" ry="45" fill="none" stroke="#ffffff14" stroke-width="1"/>
+            <ellipse cx="200" cy="200" rx="150" ry="90" fill="none" stroke="#ffffff14" stroke-width="1"/>
+            <ellipse cx="200" cy="200" rx="45" ry="150" fill="none" stroke="#ffffff14" stroke-width="1"/>
+            <ellipse cx="200" cy="200" rx="90" ry="150" fill="none" stroke="#ffffff14" stroke-width="1"/>
+            <line x1="50" y1="200" x2="350" y2="200" stroke="#ffffff14" stroke-width="1"/>
+            <line x1="200" y1="50" x2="200" y2="350" stroke="#ffffff14" stroke-width="1"/>
+          </g>
+
+          <g class="globe-network">
+            <g stroke="#F6821F" stroke-width="1" opacity="0.55">
+              <line x1="248" y1="96" x2="286" y2="70"/>
+              <line x1="248" y1="96" x2="300" y2="110"/>
+              <line x1="248" y1="96" x2="262" y2="132"/>
+              <line x1="262" y1="132" x2="230" y2="150"/>
+              <line x1="150" y1="120" x2="120" y2="90"/>
+              <line x1="150" y1="120" x2="180" y2="150"/>
+              <line x1="110" y1="260" x2="150" y2="290"/>
+              <line x1="150" y1="290" x2="200" y2="310"/>
+              <line x1="270" y1="270" x2="300" y2="250"/>
+            </g>
+
+            <g fill="#F6821F" class="globe-dots">
+              <circle cx="286" cy="70" r="3"/>
+              <circle cx="300" cy="110" r="2.5"/>
+              <circle cx="248" cy="96" r="3.5"/>
+              <circle cx="262" cy="132" r="2.5"/>
+              <circle cx="230" cy="150" r="2.5"/>
+              <circle cx="150" cy="120" r="3"/>
+              <circle cx="120" cy="90" r="2.5"/>
+              <circle cx="180" cy="150" r="2.5"/>
+              <circle cx="110" cy="260" r="3"/>
+              <circle cx="150" cy="290" r="2.5"/>
+              <circle cx="200" cy="310" r="2.5"/>
+              <circle cx="270" cy="270" r="3"/>
+              <circle cx="300" cy="250" r="2.5"/>
+            </g>
+          </g>
+        </svg>
+
+        <div class="region-earth-content">
+          <span class="region-earth-badge">Global Infrastructure</span>
+          <h2 class="region-earth-title">Region: <span class="highlight">Earth</span></h2>
+          <p class="region-earth-sub">Deploy once, run everywhere — no region to choose, no capacity to plan.</p>
+        </div>
+
+        <div class="region-earth-stats">
+          <div class="region-earth-stat">
+            <div class="region-earth-num">335<span class="unit">+</span></div>
+            <div class="region-earth-label">Cities Worldwide</div>
+          </div>
+          <div class="region-earth-stat">
+            <div class="region-earth-num">&lt;5<span class="unit">ms</span></div>
+            <div class="region-earth-label">Isolate Cold Start</div>
+          </div>
+          <div class="region-earth-stat">
+            <div class="region-earth-num">0</div>
+            <div class="region-earth-label">Regions To Configure</div>
+          </div>
+          <div class="region-earth-stat">
+            <div class="region-earth-num">&lt;50<span class="unit">ms</span></div>
+            <div class="region-earth-label">To 95% of Internet-Connected Population</div>
+          </div>
+        </div>
+      </div>
+
       <div class="panel-head">
         <h2>The V8 Isolate Model</h2>
         <p>Understanding why Workers behave differently requires understanding how they execute. Workers do not run in containers. They do not run in virtual machines. They run in <strong>V8 isolates</strong> — the same execution environment that powers Chrome's JavaScript engine — and this distinction shapes everything about how you design applications on Cloudflare.</p>
