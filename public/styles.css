@@ -400,10 +400,29 @@ html, body {
 
 .region-earth-globe {
   position: relative;
-  width: min(360px, 70vw);
-  height: auto;
-  margin-bottom: -40px;
+  width: min(460px, 85vw);
+  height: min(460px, 85vw);
+  margin: -32px 0 -20px;
 }
+
+.region-earth-globe canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.region-earth-globe canvas:active { cursor: grabbing; }
+
+.globe-fallback {
+  width: 100%;
+  height: 100%;
+}
+
+.region-earth-globe.is-live .globe-fallback { display: none; }
 
 
 

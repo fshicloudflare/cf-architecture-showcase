@@ -50,7 +50,8 @@
     <section class="panel active" id="panel-philosophy">
       <div class="region-earth">
         <div class="region-earth-glow" aria-hidden="true"></div>
-        <svg class="region-earth-globe" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Globe illustrating Cloudflare's global network of points of presence">
+        <div class="region-earth-globe" id="globe-canvas" role="img" aria-label="Rotating globe illustrating Cloudflare's global network of points of presence">
+        <svg class="globe-fallback" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <circle cx="200" cy="200" r="150" fill="none" stroke="#ffffff1a" stroke-width="1"/>
 
           <g class="globe-graticule">
@@ -92,6 +93,7 @@
             </g>
           </g>
         </svg>
+        </div>
 
         <div class="region-earth-content">
           <span class="region-earth-badge">Global Infrastructure</span>
@@ -960,5 +962,14 @@
   </footer>
 
   <script src="/app.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/vendor/three/three.module.min.js",
+        "three/addons/controls/OrbitControls.js": "/vendor/three/OrbitControls.js"
+      }
+    }
+  </script>
+  <script type="module" src="/globe.js"></script>
 </body>
 </html>
