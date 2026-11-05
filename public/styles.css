@@ -29,7 +29,7 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
@@ -74,12 +74,13 @@ html, body {
   display: flex;
   align-items: baseline;
   gap: 8px;
+  white-space: nowrap;
 }
 
 .brand-name {
   font-weight: 800;
   font-size: 17px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .brand-sub {
@@ -102,11 +103,12 @@ html, body {
   border: none;
   background: transparent;
   color: var(--muted);
-  padding: 8px 16px;
+  padding: 8px 13px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   font-family: inherit;
+  white-space: nowrap;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -138,7 +140,7 @@ html, body {
   font-size: 3rem;
   font-weight: 800;
   margin: 0 0 14px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.1;
   background: linear-gradient(135deg, var(--cf-orange), var(--cf-orange-light));
   -webkit-background-clip: text;
@@ -156,7 +158,7 @@ html, body {
 .hero-philosophy-title {
   font-size: 3rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.1;
   margin: 0 0 14px;
   color: var(--cf-orange);
@@ -367,6 +369,7 @@ html, body {
 .step p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
 
 .step .num.badge {
+  align-self: flex-start;
   width: auto;
   height: auto;
   min-width: 26px;
@@ -448,7 +451,7 @@ html, body {
 .region-earth-title {
   font-size: 3rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   margin: 0 0 10px;
   color: var(--text);
 }

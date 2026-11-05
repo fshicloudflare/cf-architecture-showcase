@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23F6821F%22/></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -272,9 +272,9 @@
             <text x="400" y="60" text-anchor="middle" class="node-title" style="font-size:12.5px">Add replicas</text>
             <text x="400" y="78" text-anchor="middle" class="node-sub">for the regions you also need</text></g>
           <line x1="510" y1="64" x2="566" y2="64" class="edge" marker-end="url(#arrow5)"/>
-          <g class="node node-security"><rect x="570" y="34" width="240" height="60" rx="10"/>
-            <text x="690" y="60" text-anchor="middle" class="node-title" style="font-size:12.5px">Design failover</text>
-            <text x="690" y="78" text-anchor="middle" class="node-sub">multi-region is an advanced, explicit pattern</text></g>
+          <g class="node node-security"><rect x="570" y="34" width="320" height="60" rx="10"/>
+            <text x="730" y="60" text-anchor="middle" class="node-title" style="font-size:12.5px">Design failover</text>
+            <text x="730" y="78" text-anchor="middle" class="node-sub">multi-region is an advanced, explicit pattern</text></g>
 
           <text x="10" y="134" class="node-sub" style="font-size:11px; letter-spacing:.04em; text-transform:uppercase; fill:#34d399">Cloudflare (default: global)</text>
           <g class="node node-compute"><rect x="10" y="144" width="220" height="60" rx="10"/>
@@ -285,9 +285,9 @@
             <text x="400" y="170" text-anchor="middle" class="node-title" style="font-size:12.5px">Runs everywhere</text>
             <text x="400" y="188" text-anchor="middle" class="node-sub">D1 replicas, DO placement auto</text></g>
           <line x1="510" y1="174" x2="566" y2="174" class="edge" marker-end="url(#arrow5)"/>
-          <g class="node node-compute"><rect x="570" y="144" width="240" height="60" rx="10"/>
-            <text x="690" y="170" text-anchor="middle" class="node-title" style="font-size:12.5px">Restrict for compliance</text>
-            <text x="690" y="188" text-anchor="middle" class="node-sub">the advanced pattern is narrowing, not expanding</text></g>
+          <g class="node node-compute"><rect x="570" y="144" width="320" height="60" rx="10"/>
+            <text x="730" y="170" text-anchor="middle" class="node-title" style="font-size:12.5px">Restrict for compliance</text>
+            <text x="730" y="188" text-anchor="middle" class="node-sub">the advanced pattern is narrowing, not expanding</text></g>
         </svg>
         </div>
 
@@ -508,7 +508,7 @@
 
         <a href="https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/" target="_blank" rel="noopener">
         <g class="node node-zt node-link"><rect x="220" y="345" width="180" height="50" rx="8"/>
-          <text x="310" y="366" text-anchor="middle" class="node-title" style="font-size:12.5px">Dispatch namespace binding</text>
+          <text x="310" y="366" text-anchor="middle" class="node-title" style="font-size:11.5px">Dispatch namespace binding</text>
           <text x="310" y="383" text-anchor="middle" class="node-sub">env.DISPATCHER.get(name)</text></g>
         </a>
 
@@ -528,7 +528,7 @@
         <g class="node node-compute node-link"><rect x="440" y="8" width="200" height="64" rx="8"/>
           <text x="540" y="30" text-anchor="middle" class="node-title" style="font-size:12.5px">Durable Object instance</text>
           <text x="540" y="48" text-anchor="middle" class="node-sub">extends DurableObject</text>
-          <text x="540" y="63" text-anchor="middle" class="node-sub">strongly consistent, single-instance</text></g>
+          <text x="540" y="63" text-anchor="middle" class="node-sub" style="font-size:10.5px">strongly consistent, single-instance</text></g>
         </a>
         <line x1="400" y1="40" x2="436" y2="40" class="edge" marker-end="url(#arrow2)"/>
 
@@ -543,7 +543,7 @@
         <a href="https://developers.cloudflare.com/containers/" target="_blank" rel="noopener">
         <g class="node node-compute node-link"><rect x="680" y="70" width="180" height="50" rx="8"/>
           <text x="770" y="91" text-anchor="middle" class="node-title" style="font-size:12.5px">Containers</text>
-          <text x="770" y="108" text-anchor="middle" class="node-sub">Container extends DurableObject</text></g>
+          <text x="770" y="108" text-anchor="middle" class="node-sub" style="font-size:10.5px">Container extends DurableObject</text></g>
         </a>
         <line x1="640" y1="48" x2="676" y2="90" class="edge-dash" marker-end="url(#arrow2-muted)"/>
 
@@ -584,10 +584,10 @@
 
         <!-- Dispatched Worker -->
         <a href="https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/" target="_blank" rel="noopener">
-        <g class="node node-zt node-link"><rect x="440" y="345" width="220" height="60" rx="8"/>
-          <text x="550" y="366" text-anchor="middle" class="node-title" style="font-size:12.5px">Dispatched Worker</text>
-          <text x="550" y="383" text-anchor="middle" class="node-sub">a separate user Worker, run via</text>
-          <text x="550" y="398" text-anchor="middle" class="node-sub">.get(name).fetch() — Workers for Platforms</text></g>
+        <g class="node node-zt node-link"><rect x="440" y="345" width="270" height="60" rx="8"/>
+          <text x="575" y="366" text-anchor="middle" class="node-title" style="font-size:12.5px">Dispatched Worker</text>
+          <text x="575" y="383" text-anchor="middle" class="node-sub">a separate user Worker, run via</text>
+          <text x="575" y="398" text-anchor="middle" class="node-sub">.get(name).fetch() — Workers for Platforms</text></g>
         </a>
         <line x1="400" y1="370" x2="436" y2="372" class="edge" marker-end="url(#arrow2)"/>
 
