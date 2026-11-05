@@ -30,6 +30,7 @@
         <button class="tab" data-target="panel-platform">Platform Products</button>
         <button class="tab" data-target="panel-fit">Assessing Fit</button>
         <button class="tab" data-target="panel-customers">Customer Stories</button>
+        <button class="tab" data-target="panel-getstarted">Get Started</button>
       </nav>
       <a class="gh-link" href="https://developers.cloudflare.com/" target="_blank" rel="noopener">docs ↗</a>
     </div>
@@ -704,6 +705,21 @@
         <line x1="735" y1="298" x2="735" y2="304" class="edge-dash" marker-end="url(#arrow3-muted)"/>
         <line x1="700" y1="308" x2="290" y2="135" class="edge-dash" marker-end="url(#arrow3-muted)"/>
 
+        <a href="https://developers.cloudflare.com/web-search/about/" target="_blank" rel="noopener">
+        <g class="node node-ai node-link"><rect x="650" y="368" width="170" height="46" rx="8"/>
+          <text x="735" y="389" text-anchor="middle" class="node-sub">Web Search API</text>
+          <text x="735" y="405" text-anchor="middle" class="node-sub" style="font-size:9.5px">live web results for agents</text></g>
+        </a>
+        <line x1="152" y1="275" x2="646" y2="391" class="edge" marker-end="url(#arrow3)"/>
+        <line x1="735" y1="368" x2="735" y2="302" class="edge-dash" marker-end="url(#arrow3-muted)"/>
+        <text x="760" y="340" class="node-sub" style="font-size:9px">routed &amp; billed via</text>
+        <a href="https://developers.cloudflare.com/web-search/providers/" target="_blank" rel="noopener">
+        <g class="node node-ai node-link"><rect x="870" y="368" width="230" height="46" rx="8"/>
+          <text x="985" y="389" text-anchor="middle" class="node-sub">Ceramic.ai / Exa / Linkup</text>
+          <text x="985" y="405" text-anchor="middle" class="node-sub" style="font-size:9.5px">search providers (BYOK supported)</text></g>
+        </a>
+        <line x1="820" y1="391" x2="866" y2="391" class="edge" marker-end="url(#arrow3)"/>
+
         <!-- Media / Realtime lane -->
         <a href="https://developers.cloudflare.com/browser-run/" target="_blank" rel="noopener">
         <g class="node node-compute node-link"><rect x="1110" y="196" width="180" height="46" rx="8"/>
@@ -899,6 +915,41 @@
       </div>
 
       <div class="grid case-grid" id="case-grid"></div>
+    </section>
+
+    <!-- ============ PANEL: GET STARTED ============ -->
+    <section class="panel" id="panel-getstarted">
+      <div class="panel-head">
+        <h2>Get Started — bring your coding agent to Cloudflare</h2>
+        <p>Cloudflare provides Skills and MCP servers so your coding agent can build on the platform directly — no copy-pasting docs into context. Every agent below supports Skills and MCP; pick the one you use for step-by-step setup instructions.</p>
+      </div>
+
+      <div class="cta-wrap">
+        <a class="cta-button" href="https://developers.cloudflare.com/agent-setup/" target="_blank" rel="noopener">Open the Agent Setup Guide ↗</a>
+      </div>
+
+      <h3>Pick your agent</h3>
+      <div class="grid agent-grid" id="agent-grid"></div>
+
+      <h3>Key concepts</h3>
+      <div class="concepts-grid">
+        <div class="concept-card">
+          <div class="concept-term">Skills</div>
+          <p>Reusable prompt packages that teach an agent about a specific domain — plugins made of instructions plus slash commands.</p>
+        </div>
+        <div class="concept-card">
+          <div class="concept-term">MCP</div>
+          <p>The Model Context Protocol — a standard that lets agents call external tools and APIs. Connect an MCP server and the agent knows how to use it.</p>
+        </div>
+        <div class="concept-card">
+          <div class="concept-term">Model flexibility</div>
+          <p><strong>Locked</strong> supports only the vendor's own models. <strong>BYOK</strong> lets you bring your own API key. <strong>Multi-provider</strong> supports several providers out of the box.</p>
+        </div>
+        <div class="concept-card">
+          <div class="concept-term">Context</div>
+          <p><strong>Session</strong> only remembers the current conversation. <strong>Project memory</strong> persists across sessions. <strong>Indexed codebase</strong> builds a searchable index of the whole repo.</p>
+        </div>
+      </div>
     </section>
   </main>
 

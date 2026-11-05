@@ -5,16 +5,21 @@ const panels = document.querySelectorAll(".panel");
 const diagramHint = document.getElementById("diagram-hint");
 const heroDefault = document.getElementById("hero-default");
 const heroPhilosophy = document.getElementById("hero-philosophy");
+const heroSection = document.querySelector(".hero");
 
 const DIAGRAM_PANELS = new Set(["panel-request", "panel-platform"]);
+const NO_DEFAULT_HERO_PANELS = new Set(["panel-philosophy", "panel-customers", "panel-getstarted", "panel-fit"]);
 
 function activatePanel(target) {
   const isPhilosophy = target === "panel-philosophy";
   tabs.forEach((t) => t.classList.toggle("active", t.getAttribute("data-target") === target));
   panels.forEach((p) => p.classList.toggle("active", p.id === target));
-  if (diagramHint) diagramHint.style.display = DIAGRAM_PANELS.has(target) ? "" : "none";
-  if (heroDefault) heroDefault.hidden = isPhilosophy;
+  const showHint = DIAGRAM_PANELS.has(target);
+  const hideDefaultHero = NO_DEFAULT_HERO_PANELS.has(target);
+  if (diagramHint) diagramHint.style.display = showHint ? "" : "none";
+  if (heroDefault) heroDefault.hidden = hideDefaultHero;
   if (heroPhilosophy) heroPhilosophy.hidden = !isPhilosophy;
+  if (heroSection) heroSection.style.display = (hideDefaultHero && !isPhilosophy) ? "none" : "";
 }
 
 tabs.forEach((tab) => {
@@ -57,6 +62,7 @@ const PRODUCTS = [
   { name: "AI Gateway", cat: "ai", icon: "GW", desc: "A Worker (or any app) routes its Workers AI or third-party provider requests through an AI Gateway endpoint to add caching, rate limiting, retries, and fallback." },
   { name: "Vectorize", cat: "ai", icon: "VZ", desc: "A vectorize binding gives a Worker a globally distributed vector database, typically queried alongside Workers AI embeddings for RAG." },
   { name: "AI Search", cat: "ai", icon: "AS", desc: "A managed retrieval-augmented search service built on Vectorize and Workers AI; a Worker calls it directly instead of assembling its own RAG pipeline." },
+  { name: "Web Search API", cat: "ai", icon: "WS", desc: "Cloudflare's own search API, built on AI Gateway: a Worker sends a query, Web Search API forwards it to a provider (Ceramic.ai by default, or Exa/Linkup — not Google) and returns normalized results to ground an agent in live web data. Logged and billed through your AI Gateway credit balance, with BYOK support." },
 
   // Media & Realtime
   { name: "Images", cat: "media", icon: "IMG", desc: "An images binding or URL transform lets a Worker resize, optimize, and serve images on the fly at the edge." },
@@ -151,5 +157,43 @@ if (caseGrid) {
       <span class="case-read">Read case study ↗</span>
     `;
     caseGrid.appendChild(tile);
+  });
+}
+
+// Coding agents — from developers.cloudflare.com/agent-setup/
+const AGENTS = [
+  { slug: "claude-code", name: "Claude Code", maker: "Anthropic", workflow: "terminal", desc: "Terminal-based coding agent that understands your codebase, runs commands, edits files, and manages git." },
+  { slug: "codex", name: "Codex", maker: "OpenAI", workflow: "terminal", desc: "Coding agent available as a terminal CLI and desktop app. Reads and writes files, runs commands, and browses the web in a sandbox." },
+  { slug: "cursor", name: "Cursor", maker: "Cursor", workflow: "ide", desc: "AI-first IDE built on VS Code with multi-file Composer edits and background agents." },
+  { slug: "github-copilot", name: "GitHub Copilot", maker: "GitHub", workflow: "extension", desc: "Editor extension and CLI with agent mode, workspace context, and native PR integration." },
+  { slug: "opencode", name: "OpenCode", maker: "Anomaly", workflow: "terminal", desc: "Open-source terminal agent with a rich TUI that works with 75+ LLMs." },
+  { slug: "pi", name: "Pi", maker: "Earendil", workflow: "terminal", desc: "Minimal, extensible agent harness that you can make your own." },
+  { slug: "vibe", name: "Vibe", maker: "Mistral AI", workflow: "terminal", desc: "Coding agent for terminal, IDE, and cloud workflows that reads files, runs commands, writes code, and opens pull requests." },
+  { slug: "devin", name: "Devin", maker: "Cognition", workflow: "cloud", desc: "A full IDE with an agent manager built in — the command center for managing all your agents in one place." },
+  { slug: "visual-studio-code", name: "Visual Studio Code", maker: "Microsoft", workflow: "ide", desc: "Free, open-source code editor with native MCP client support and Copilot Chat integration." },
+  { slug: "command-code", name: "Command Code", maker: "Command Code", workflow: "terminal", desc: "One of the most used coding agents for open models. Automatically learns your coding taste and self-improves as you work." },
+  { slug: "bionic", name: "Bionic", maker: "LM Studio", workflow: "terminal", desc: "Powerful agent for coding and work. Natively local, with open models in the cloud." },
+  { slug: "droid", name: "Droid", maker: "Factory", workflow: "cloud", desc: "Model-agnostic coding agent that plans, edits files, runs commands, and automates CI, from the terminal, desktop app, or cloud." },
+];
+
+const WORKFLOW_LABEL = { terminal: "Terminal", ide: "IDE", cloud: "Cloud", extension: "Extension" };
+
+const agentGrid = document.getElementById("agent-grid");
+if (agentGrid) {
+  AGENTS.forEach((a) => {
+    const tile = document.createElement("a");
+    tile.className = "card agent-card";
+    tile.href = `https://developers.cloudflare.com/agent-setup/${a.slug}/`;
+    tile.target = "_blank";
+    tile.rel = "noopener";
+    tile.innerHTML = `
+      <div class="card-top">
+        <div class="card-icon workflow-${a.workflow}">${a.name.slice(0, 2).toUpperCase()}</div>
+        <div class="card-title">${a.name}</div>
+      </div>
+      <div class="card-cat">${a.maker} · <span class="workflow-badge workflow-${a.workflow}">${WORKFLOW_LABEL[a.workflow]}</span></div>
+      <p>${a.desc}</p>
+    `;
+    agentGrid.appendChild(tile);
   });
 }

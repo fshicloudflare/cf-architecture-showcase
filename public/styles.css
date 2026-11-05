@@ -194,6 +194,8 @@ html, body {
 .panel { display: none; padding-bottom: 64px; }
 .panel.active { display: block; }
 
+#panel-fit, #panel-customers, #panel-getstarted { padding-top: 64px; }
+
 .panel-head { margin-bottom: 24px; max-width: 780px; }
 .panel-head h2 {
   font-size: 1.5rem;
@@ -496,7 +498,8 @@ html, body {
 }
 
 .article h3,
-#panel-fit h3 {
+#panel-fit h3,
+#panel-getstarted h3 {
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -903,6 +906,81 @@ html, body {
   font-weight: 600;
   color: var(--cf-orange);
 }
+
+/* Get Started tab */
+.cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 18px 44px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #14100a;
+  background: linear-gradient(135deg, var(--cf-orange), var(--cf-orange-light));
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(246, 130, 31, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(246, 130, 31, 0.45);
+}
+
+.agent-grid { margin-bottom: 36px; }
+
+.agent-card { text-decoration: none; color: inherit; display: block; cursor: pointer; }
+
+.workflow-terminal { background: rgba(246, 130, 31, 0.14); color: var(--cf-orange); }
+.workflow-ide { background: rgba(59, 130, 246, 0.14); color: var(--blue); }
+.workflow-cloud { background: rgba(167, 139, 250, 0.14); color: var(--purple); }
+.workflow-extension { background: rgba(52, 211, 153, 0.14); color: var(--green); }
+
+.workflow-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+.concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.concept-card {
+  background: #ffffff05;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.concept-term {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cf-orange-light);
+  margin-bottom: 8px;
+}
+
+.concept-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.concept-card strong { color: var(--text); }
 
 /* Footer */
 .site-footer {
