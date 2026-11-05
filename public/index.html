@@ -25,8 +25,8 @@
         <span class="brand-sub">Developer Platform</span>
       </div>
       <nav class="tabs" id="tabs">
-        <button class="tab" data-target="panel-philosophy">Philosophy</button>
-        <button class="tab active" data-target="panel-request">Request Flow</button>
+        <button class="tab active" data-target="panel-philosophy">Philosophy</button>
+        <button class="tab" data-target="panel-request">Request Flow</button>
         <button class="tab" data-target="panel-platform">Platform Products</button>
         <button class="tab" data-target="panel-fit">Assessing Fit</button>
         <button class="tab" data-target="panel-customers">Customer Stories</button>
@@ -37,16 +37,16 @@
 
   <main class="wrap">
     <section class="hero">
-      <div id="hero-default">
+      <div id="hero-default" hidden>
         <h1>Reference Architecture</h1>
         <p>Two views of how Cloudflare's connectivity cloud works: the path a request takes when it hits the network, and the full catalog of developer platform products you can compose to build on it.</p>
       </div>
-      <h1 id="hero-philosophy" class="hero-philosophy-title" hidden>Opinionated Platform For Modern Applications</h1>
-      <p class="hint" id="diagram-hint"><span class="pulse-dot"></span>Tip: every node in the diagrams below is clickable — it opens that product's page on developers.cloudflare.com.</p>
+      <h1 id="hero-philosophy" class="hero-philosophy-title">Opinionated Platform For Modern Applications</h1>
+      <p class="hint" id="diagram-hint" style="display:none"><span class="pulse-dot"></span>Tip: every node in the diagrams below is clickable — it opens that product's page on developers.cloudflare.com.</p>
     </section>
 
     <!-- ============ PANEL 0: PHILOSOPHY ============ -->
-    <section class="panel" id="panel-philosophy">
+    <section class="panel active" id="panel-philosophy">
       <div class="region-earth">
         <div class="region-earth-glow" aria-hidden="true"></div>
         <svg class="region-earth-globe" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Globe illustrating Cloudflare's global network of points of presence">
@@ -322,7 +322,7 @@
     </section>
 
     <!-- ============ PANEL 1: REQUEST FLOW ============ -->
-    <section class="panel active" id="panel-request">
+    <section class="panel" id="panel-request">
       <div class="panel-head">
         <h2>Inbound Request Flow</h2>
         <p>A request from a client traverses Cloudflare's Anycast edge, security &amp; performance services, then compute — before optionally reaching an origin or being served entirely from the edge.</p>
